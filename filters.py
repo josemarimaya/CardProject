@@ -9,7 +9,6 @@ def limite_compra(limite, precios):
     """Selecciona las cartas cuyo precio acumulado no supere el presupuesto."""
     suma = 0
     seleccionadas = []
-    
     for precio in precios:
         if suma + precio <= limite:
             suma += precio
@@ -28,7 +27,7 @@ def filtrar_cartas_por_presupuesto(df):
     print("\nCartas dentro del presupuesto:")
     print(cartas_filtradas.to_string(index=False))
     print(f"\nSuma total de las cartas dentro del presupuesto: {suma_filtrada:.2f} €")
-
+    print(f"Cartas en total: {len(cartas_filtradas)}")
 if __name__ == "__main__":
     archivo = "cartitas.ods"  # Nombre del archivo en la misma carpeta
     datos = cargar_datos(archivo)
