@@ -51,7 +51,8 @@ if __name__ == "__main__":
 
     for carta in datos:
         res = obtener_precio_carta(carta)
-        print(f"{res}")
+        if res is not None:
+            print(f"{res}")
 
     total = sumatorio_total(datos)
     print(f"\nSuma total de todas las cartas: {total}€")
