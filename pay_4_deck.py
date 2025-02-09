@@ -5,7 +5,7 @@ def cargar_datos(nombre_archivo):
     df = pd.read_excel(nombre_archivo, engine="odf")
     
     # Llenamos hacia adelante los valores nulos en la columna 'Deck'
-    df["Deck"] = df["Deck"].fillna(method='ffill')
+    df["Deck"] = df["Deck"].ffill()
     
     # Filtramos las columnas necesarias y eliminamos filas con datos faltantes
     df_filtered = df[["Deck", "Carta", "Precio"]].dropna(subset=["Carta", "Precio"])
