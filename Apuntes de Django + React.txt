@@ -1,0 +1,6 @@
+Todo lo haremos manteniendo activado el entorno virtual: venv\Scripts\activate       
+
+Por un lado vamos a mantener encendido el servidor de backend: python .\manage.py runserver
+
+Por otro lado, accedemos a la carpeta del frontend: cd client
+Y encendemos también el servidor del front: npm run dev
